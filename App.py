@@ -4,7 +4,7 @@ from transformers import pipeline
 import datasets
 import pandas as pd
 from huggingface_hub import login
-
+import os
 
 LOGGER = get_logger(__name__)
 
@@ -61,5 +61,15 @@ def run():
             LOGGER.info("TEXT: " +user_input + "\t" +"LABEL: "+feedback_picker)
             st.sidebar.write("תודה על המשוב!")
 
+def print_paths():
+    base_path = os.getcwd()
+    model_path = os.path.join(base_path, "sivan22/halacha-siman-seif-classifier-new")
+    dataset_path = os.path.join(base_path, "sivan22/orach-chaim")
+    
+    print(f"Base path: {base_path}")
+    print(f"Model path: {model_path}")
+    print(f"Dataset path: {dataset_path}")
+
 if __name__ == "__main__":
+    print_paths()
     run()
