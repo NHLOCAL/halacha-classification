@@ -23,6 +23,14 @@ jobs:
         pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Print current directory
+      run: |
+        python -c "import os; print('Current working directory:', os.getcwd())"
+        python -c "import os; print('Contents of the directory:', os.listdir())"
+
+    - name: Run Python script
+      run: python App.py
+
     - name: Install PyInstaller
       run: pip install pyinstaller
 
