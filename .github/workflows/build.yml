@@ -27,7 +27,7 @@ jobs:
       run: pip install pyinstaller
 
     - name: Build EXE
-      run: pyinstaller --onefile App.py --add-data "sivan22/orach-chaim;./sivan22/orach-chaim" --add-data "sivan22/halacha-siman-seif-classifier-new;./sivan22/halacha-siman-seif-classifier-new"
+      run: pyinstaller --onefile App.py --add-data "./sivan22/orach-chaim;./sivan22/orach-chaim" --add-data "./sivan22/halacha-siman-seif-classifier-new;./sivan22/halacha-siman-seif-classifier-new"
 
     - name: Upload EXE
       uses: actions/upload-artifact@v4
