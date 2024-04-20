@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit.logger import get_logger
-from transformers import  pipeline
+from transformers import pipeline
 import datasets
 import pandas as pd
 from huggingface_hub import login
